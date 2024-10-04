@@ -1,17 +1,29 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+  <q-page-container>
+    <q-page padding>
+      <p v-for="n in 15" :key="n">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil
+        praesentium molestias a adipisci, dolore vitae odit, quidem consequatur
+        optio voluptates asperiores pariatur eos numquam rerum delectus commodi
+        perferendis voluptate?
+      </p>
+
+      <!-- place QPageScroller at end of page -->
+      <q-page-scroller
+        position="bottom-right"
+        :scroll-offset="150"
+        :offset="[18, 18]"
+      >
+        <q-btn fab icon="keyboard_arrow_up" color="accent" />
+      </q-page-scroller>
+    </q-page>
+  </q-page-container>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: "IndexPage",
 });
 </script>
