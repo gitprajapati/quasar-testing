@@ -1,6 +1,6 @@
 <template>
-  <q-page class="q-pa-sm"
-    ><q-pull-to-refresh @refresh="fetchOrderHistory">
+  <div class="q-pa-md">
+    <q-pull-to-refresh @refresh="fetchOrderHistory">
       <div class="row q-col-gutter-sm">
         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
           <q-card class="card-bg text-white no-shadow" bordered>
@@ -53,7 +53,7 @@
         </div>
       </div></q-pull-to-refresh
     >
-  </q-page>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
-  <q-page class="q-pa-md">
-    <q-pull-to-refresh @refresh="fetchOrderHistory">
+  <div class="scroll flex-layout">
+    <q-pull-to-refresh @refresh="fetchOrderHistory" scroll-target="scroll">
       <!-- <div v-if="isLoading" class="loading-overlay">
         <q-spinner-dots color="primary" size="3em" />
       </div> -->
@@ -201,7 +201,7 @@
         </q-card>
       </div></q-pull-to-refresh
     >
-  </q-page>
+  </div>
 </template>
 
 <script>
@@ -260,7 +260,7 @@ export default {
       const date = new Date(isoDateString);
       return date.toLocaleTimeString();
     },
-    async fetchOrderHistory() {
+    async fetchOrderHistory(done) {
       try {
         this.isLoading = true;
         const username = JSON.parse(localStorage.getItem("userData")).username;
@@ -273,6 +273,7 @@ export default {
       } finally {
         this.isLoading = false;
         this.isLoadingRefresh = false;
+        done();
       }
     },
     async confirmBooking(bookingId, bookingDateTime) {
@@ -376,6 +377,19 @@ export default {
 }
 .text-danger {
   color: red;
+}
+.flex-layout {
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* Full viewport height */
+}
+
+.q-card {
+  flex-grow: 1; /* Allow this section to grow */
+}
+
+.q-btn {
+  flex-shrink: 0; /* Ensure buttons don't shrink */
 }
 .text-warning {
   color: orange;

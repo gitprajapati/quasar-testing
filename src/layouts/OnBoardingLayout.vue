@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hhh lpR fFf">
-    <q-header elevated class="bg-primary text-white" height-hint="98">
+    <q-header elevated class="bg-primary text-white">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar size="70px">
@@ -109,9 +109,6 @@
 </template>
 
 <script>
-import { route } from "quasar/wrappers";
-import router from "src/router";
-
 export default {
   name: "OnBoardingLayout",
 
