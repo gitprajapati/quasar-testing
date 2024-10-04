@@ -75,7 +75,12 @@
           </q-item>
           <q-item clickable v-ripple class="absolute-bottom-left">
             <q-item-section avatar>
-              <q-btn color="brown-5" label="Logout" @click="logoutProcess" />
+              <q-btn
+                color="brown-5"
+                label="Logout"
+                @click="logoutProcess"
+                to="/AuthLayout"
+              />
             </q-item-section>
           </q-item>
         </q-list>
@@ -125,7 +130,6 @@ export default {
     },
     logoutProcess() {
       localStorage.clear("token");
-      this.router.push("/AuthLayout");
     },
   },
   computed: {
