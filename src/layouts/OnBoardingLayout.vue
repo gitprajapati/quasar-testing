@@ -97,8 +97,8 @@
               src="https://res.cloudinary.com/dyqtvfh5a/image/upload/v1726404321/mnlx5y33lfvyxzuqbcdc.jpg"
             />
           </q-avatar>
-          <div class="text-weight-bold">Name: Ravi Shukla</div>
-          <div>@username</div>
+          <div class="text-weight-bold">Name: Abhishek Prasad</div>
+          <div>@prajapati</div>
         </div>
       </q-img>
     </q-drawer>
