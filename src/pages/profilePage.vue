@@ -8,7 +8,7 @@
               <q-avatar size="100px" class="shadow-10">
                 <img src="profile.svg" />
               </q-avatar>
-              <div class="text-h6 q-mt-md">Pratik Patel</div>
+              <div class="text-h6 q-mt-md">Abhishek Prasad</div>
             </q-card-section>
             <q-card-section>
               <div>
